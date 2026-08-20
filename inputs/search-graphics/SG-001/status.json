@@ -1,0 +1,21 @@
+{
+  "task_id": "SG-001",
+  "title": "高丽参太硬，在家到底怎么切片？",
+  "status": "待领取",
+  "confirmed_items": [],
+  "missing_items": [
+    "SKU、规格、批次",
+    "12个问题逐项答案",
+    "时间和厚度实测数据",
+    "韩宝林完整原话",
+    "关键操作素材",
+    "保存方法运营确认",
+    "素材可追溯信息"
+  ],
+  "last_updated": "2026-08-20T10:30:00+08:00",
+  "access_blocked": false,
+  "feishu_base_token": "FfU7bwcdtaKzwxsRtxmcNewvnof",
+  "feishu_table_id": "tblWL6W2fzlAeIso",
+  "feishu_record_id": "recvsNEV1zRNzY",
+  "feishu_record_link": "https://my.feishu.cn/record/ZSsUrjnq2evxhnc2aYbcGDylnh2"
+}
