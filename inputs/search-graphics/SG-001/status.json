@@ -1,21 +1,32 @@
 {
   "task_id": "SG-001",
   "title": "高丽参太硬，在家到底怎么切片？",
-  "status": "待领取",
-  "confirmed_items": [],
-  "missing_items": [
-    "SKU、规格、批次",
-    "12个问题逐项答案",
-    "时间和厚度实测数据",
-    "韩宝林完整原话",
-    "关键操作素材",
-    "保存方法运营确认",
-    "素材可追溯信息"
+  "task_type": "搜索型图文一页纸沟通方案",
+  "status": "待取证",
+  "document_url": "https://my.feishu.cn/docx/PUG2d1BwKoXWvxxUqNNcYP2LnQe",
+  "document_id": "PUG2d1BwKoXWvxxUqNNcYP2LnQe",
+  "modules_completed": [
+    "项目基础信息", "为什么做", "服务对象", "认知变化",
+    "唯一品牌认知", "封面方案", "7页图文成品结构",
+    "现场采访填写区（10题三列）", "必须上传的素材",
+    "视觉规范", "搜索词与发布布局", "发布正文初稿",
+    "置顶评论", "获客验证", "品牌认知验证",
+    "团队分工", "状态流", "飞书交付要求"
   ],
-  "last_updated": "2026-08-20T10:30:00+08:00",
+  "confirmed_items": [
+    "飞书一页纸已创建（18个模块全部写入）",
+    "三列采访区已嵌入中段（10题完整）",
+    "搜索词、视觉规范、获客与认知指标均已可见",
+    "SG-001已在文档标题中创建"
+  ],
+  "missing_items": [
+    "韩宝林现场回答（10题待填）",
+    "13项素材待拍摄上传",
+    "发布正文待取证后GPT替换",
+    "获客和品牌认知指标待发布后记录"
+  ],
+  "last_updated": "2026-08-20T11:00:00+08:00",
   "access_blocked": false,
-  "feishu_base_token": "FfU7bwcdtaKzwxsRtxmcNewvnof",
-  "feishu_table_id": "tblWL6W2fzlAeIso",
-  "feishu_record_id": "recvsNEV1zRNzY",
-  "feishu_record_link": "https://my.feishu.cn/record/ZSsUrjnq2evxhnc2aYbcGDylnh2"
+  "issue_source": "Issue #2 (取代Issue #1)",
+  "replaces_issue_1": true
 }
