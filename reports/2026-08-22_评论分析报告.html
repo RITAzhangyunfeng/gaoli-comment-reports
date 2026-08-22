@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高丽参直播间评论分析报告 — 2026-08-22（补发）</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
+
+/* Header */
+.header { background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 50%, #e53935 100%); color: #fff; padding: 40px 24px; text-align: center; }
+.header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.header .date { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+.header .stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.header .stat { text-align: center; }
+.header .stat .num { font-size: 32px; font-weight: 700; }
+.header .stat .label { font-size: 12px; opacity: 0.8; margin-top: 2px; }
+.header .alert { margin-top: 16px; background: rgba(255,255,255,0.15); border-radius: 8px; padding: 8px 16px; font-size: 13px; display: inline-block; }
+
+/* Container */
+.container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+
+/* Section */
+.section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.section h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e53935; color: #b71c1c; }
+.section h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; color: #333; }
+
+/* Overview */
+.overview-text { font-size: 14px; color: #555; line-height: 1.8; }
+.overview-text strong { color: #b71c1c; }
+
+/* Topic card */
+.topic { border-left: 3px solid #e53935; padding: 12px 16px; margin-bottom: 12px; background: #fafafa; border-radius: 0 8px 8px 0; transition: all 0.2s; }
+.topic:hover { background: #fff0f0; transform: translateX(4px); }
+.topic .topic-name { font-size: 15px; font-weight: 600; color: #b71c1c; margin-bottom: 4px; }
+.topic .topic-freq { display: inline-block; font-size: 11px; background: #e53935; color: #fff; padding: 1px 8px; border-radius: 10px; margin-left: 8px; vertical-align: middle; }
+.topic .topic-desc { font-size: 13px; color: #666; margin-bottom: 8px; }
+.topic .quote { font-size: 13px; color: #888; border-left: 2px solid #ddd; padding-left: 10px; margin: 4px 0; }
+.topic .quote .user { font-weight: 600; color: #555; }
+
+/* FAQ list */
+.faq { list-style: none; counter-reset: faq; }
+.faq li { counter-increment: faq; padding: 10px 0 10px 36px; position: relative; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+.faq li::before { content: counter(faq); position: absolute; left: 0; top: 10px; width: 24px; height: 24px; background: #e53935; color: #fff; border-radius: 50%; text-align: center; line-height: 24px; font-size: 12px; font-weight: 700; }
+
+/* Script topics */
+.script-topic { background: linear-gradient(135deg, #fff8f8, #fff); border: 1px solid #ffcdd2; border-radius: 8px; padding: 16px; margin-bottom: 12px; transition: all 0.2s; }
+.script-topic:hover { box-shadow: 0 2px 8px rgba(229,57,53,0.15); }
+.script-topic .st-title { font-size: 15px; font-weight: 700; color: #b71c1c; margin-bottom: 6px; }
+.script-topic .st-angle { font-size: 13px; color: #666; }
+.script-topic .st-angle::before { content: "核心角度："; font-weight: 600; color: #888; }
+
+/* Insights */
+.insight { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; line-height: 1.7; }
+.insight:last-child { border-bottom: none; }
+.insight .insight-num { display: inline-block; width: 22px; height: 22px; background: #b71c1c; color: #fff; border-radius: 50%; text-align: center; line-height: 22px; font-size: 11px; font-weight: 700; margin-right: 8px; vertical-align: text-top; }
+
+/* GPT prompt section */
+.gpt-section { background: #1a1a2e; color: #e0e0e0; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+.gpt-section h2 { color: #e53935; border-bottom-color: #e53935; }
+.gpt-section .insight { border-bottom-color: #333; color: #ccc; }
+.gpt-section .insight .insight-num { background: #e53935; }
+
+/* Footer */
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+.footer .note { color: #e53935; margin-top: 4px; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header h1 { font-size: 20px; }
+  .header .stats { gap: 16px; }
+  .header .stat .num { font-size: 24px; }
+  .section { padding: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>高丽参直播间评论分析报告</h1>
+  <div class="date">数据周期：8月20日（补发） | 来源：抖音直播间 | 报告日期：2026-08-22</div>
+  <div class="stats">
+    <div class="stat"><div class="num">1</div><div class="label">直播场次</div></div>
+    <div class="stat"><div class="num">29</div><div class="label">评论条数</div></div>
+    <div class="stat"><div class="num">11</div><div class="label">参与消费者</div></div>
+    <div class="stat"><div class="num">8</div><div class="label">需求主题</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">脚本选题</div></div>
+  </div>
+  <div class="alert">⚠ 原定8/22 09:00自动生成，因定时任务执行异常数据被标记但报告未产出，现手动补发</div>
+</div>
+
+<div class="container">
+
+<!-- 概览 -->
+<div class="section">
+  <h2>当日评论概览</h2>
+  <div class="overview-text">
+    本期覆盖8月20日单场直播评论语料（因8月22日定时任务执行异常，数据被标记为已分析但报告未生成，现补发）。消费者提问集中在<strong>食用方法与功效认知</strong>（持续最高频）、<strong>试吃需求</strong>（连续三期出现，强度不减）、<strong>规格选择与链接对比</strong>（新消费者尤其困惑）。核心新发现：多位消费者追问产品基础属性（是否黑参、是否初级农产品、为什么像朝鲜），说明品牌认知教育仍有大量空白。同时出现假牙咬不动、整根直径等物理特征关注，指向消费者对实物形态的焦虑。
+  </div>
+</div>
+
+<!-- 需求主题 -->
+<div class="section">
+  <h2>消费者需求主题分组</h2>
+
+  <div class="topic">
+    <div class="topic-name">主题1：食用方法与功效认知<span class="topic-freq">持续最高频</span></div>
+    <div class="topic-desc">消费者反复追问"有什么用""怎么吃"，功效认知和食用方法仍是最大知识空白。</div>
+    <div class="quote"><span class="user">彼德brie：</span>有什么用</div>
+    <div class="quote"><span class="user">喜欢丑的：</span>有什么功能</div>
+    <div class="quote"><span class="user">喜欢丑的：</span>说说使用方法 / 怎么食用功效更好</div>
+    <div class="quote"><span class="user">九重城阙烟尘生：</span>什么意思</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题2：试吃需求<span class="topic-freq">连续三期</span></div>
+    <div class="topic-desc">试吃是消费者降低决策门槛的核心诉求，从8/18持续至今，本期再次出现3条试吃相关提问。</div>
+    <div class="quote"><span class="user">奋斗%：</span>有试吃的吗</div>
+    <div class="quote"><span class="user">宝贝留恋：</span>能试吃吗</div>
+    <div class="quote"><span class="user">用户6110791710918：</span>如何试用？</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题3：规格选择与链接对比<span class="topic-freq">新增高痛点</span></div>
+    <div class="topic-desc">新消费者对1号、2号链接的区别完全不了解，且期望更小规格。</div>
+    <div class="quote"><span class="user">李李^：</span>1号链接和2号链接有什么区别</div>
+    <div class="quote"><span class="user">用户6110791710918：</span>可买二十克吗？</div>
+    <div class="quote"><span class="user">三米之内：</span>为什么不搞点50克100克250的切片</div>
+    <div class="quote"><span class="user">圆融：</span>你家就这两个字号</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题4：产品认知与分类困惑<span class="topic-freq">认知空白严重</span></div>
+    <div class="topic-desc">消费者对高丽参的基础属性认知模糊——是否黑参、是否初级农产品、为什么像朝鲜、天字号是什么。</div>
+    <div class="quote"><span class="user">飞天：</span>这是黑参？</div>
+    <div class="quote"><span class="user">用户6110791710918：</span>是初级农产品吗？</div>
+    <div class="quote"><span class="user">小伙儿：</span>为什么说像朝鲜？</div>
+    <div class="quote"><span class="user">圆融：</span>讲讲天字号</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题5：品质与物理特征关注<span class="topic-freq">新增关注</span></div>
+    <div class="topic-desc">消费者开始关注高丽参的物理形态——直径大小、假牙是否能咬动，反映老年消费者群体对食用便利性的焦虑。</div>
+    <div class="quote"><span class="user">圆融：</span>直径多少的 / 整根直径</div>
+    <div class="quote"><span class="user">喜欢丑的：</span>假牙能咬得动吗</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题6：价格与促销敏感<span class="topic-freq">持续</span></div>
+    <div class="topic-desc">恢复原价引发消费者情绪反应。</div>
+    <div class="quote"><span class="user">七分天注定…：</span>韩总，真的恢复原价了？[捂脸][捂脸]</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题7：购买决策与赠品<span class="topic-freq">新增送礼场景</span></div>
+    <div class="topic-desc">消费者关注送礼场景和赠品。</div>
+    <div class="quote"><span class="user">美好：</span>哪款送礼比较合适</div>
+    <div class="quote"><span class="user">喜欢丑的：</span>有赠品吗 一号链接</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题8：正面反馈<span class="topic-freq">口碑素材</span></div>
+    <div class="topic-desc">简短好评说明品质认可度高。</div>
+    <div class="quote"><span class="user">扭矩放大器：</span>好参 / 值了</div>
+    <div class="quote"><span class="user">钟雄生：</span>已拍（已购）</div>
+    <div class="quote"><span class="user">遥远的云：</span>都已经秋天了，更没问题了</div>
+  </div>
+</div>
+
+<!-- 高频问题 -->
+<div class="section">
+  <h2>高频问题清单（按出现频次排序）</h2>
+  <ol class="faq">
+    <li>有什么用？有什么功能？（功效认知空白）</li>
+    <li>怎么吃？说说使用方法，怎么食用功效更好？</li>
+    <li>有试吃的吗？能试吃吗？如何试用？（连续三期高频）</li>
+    <li>1号链接和2号链接有什么区别？</li>
+    <li>可不可以买小规格？20克？50克100克250克的切片？</li>
+    <li>这是黑参吗？是初级农产品吗？</li>
+    <li>讲讲天字号，你家就这两个字号？</li>
+    <li>直径多少？整根直径？假牙能咬得动吗？</li>
+    <li>回家怎么保存？</li>
+    <li>哪款送礼比较合适？有赠品吗？</li>
+  </ol>
+</div>
+
+<!-- 脚本选题 -->
+<div class="section">
+  <h2>脚本选题建议</h2>
+
+  <div class="script-topic">
+    <div class="st-title">选题1：高丽参到底有什么用？——功效科普一次讲透</div>
+    <div class="st-angle">功效清单 + 适用人群 + 季节适用性（接"秋天了更没问题"的消费者反馈）</div>
+  </div>
+
+  <div class="script-topic">
+    <div class="st-title">选题2：试吃装来了！先尝后买不踩坑</div>
+    <div class="st-angle">试吃装机制发布 + 开箱实测 + 决策门槛降低话术</div>
+  </div>
+
+  <div class="script-topic">
+    <div class="st-title">选题3：1号vs2号vs天字号——链接选择全攻略</div>
+    <div class="st-angle">链接对比表 + 天/良等级讲解 + 送礼/自用推荐矩阵</div>
+  </div>
+
+  <div class="script-topic">
+    <div class="st-title">选题4：小规格切片来了！50克100克250克任选</div>
+    <div class="st-angle">小规格上新 + 切片便利性 + 老年友好食用方案</div>
+  </div>
+
+  <div class="script-topic">
+    <div class="st-title">选题5：这是黑参吗？是初级农产品吗？——产品身份大揭秘</div>
+    <div class="st-angle">加工分类科普 + 产品属性说明 + 产地溯源（回应"为什么像朝鲜"）</div>
+  </div>
+
+  <div class="script-topic">
+    <div class="st-title">选题6：假牙能咬得动吗？——高丽参食用便利性指南</div>
+    <div class="st-angle">食用方式对比 + 老年友好方案 + 切片/炖煮实操</div>
+  </div>
+</div>
+
+<!-- 累计洞察 -->
+<div class="gpt-section">
+  <h2>累计洞察（结合三期语料）</h2>
+
+  <div class="insight"><span class="insight-num">1</span><strong>食用方法是贯穿性最大知识空白。</strong>连续三期"怎么吃""有什么用"反复出现，应固化为直播固定环节并随单附赠食用说明卡。</div>
+  <div class="insight"><span class="insight-num">2</span><strong>试吃需求已连续三期出现，必须落地。</strong>从8/18"有切片卖吗"到8/20"有试吃的吗""能试吃吗""如何试用"，建议立即推出试吃装。</div>
+  <div class="insight"><span class="insight-num">3</span><strong>规格灵活性需求升级。</strong>从"有没有300克包装"到"为什么不搞50克100克250克切片""可买二十克吗"，呼声越来越具体。</div>
+  <div class="insight"><span class="insight-num">4</span><strong>产品基础认知教育严重不足。</strong>"这是黑参""是初级农产品吗""为什么像朝鲜"——消费者连基本属性都不清楚，话术需从功效宣传回补到基础科普。</div>
+  <div class="insight"><span class="insight-num">5</span><strong>老年消费者群体浮现。</strong>"假牙能咬得动吗"是全新信号，食用便利性应成为产品设计的考量。</div>
+  <div class="insight"><span class="insight-num">6</span><strong>链接对比困惑是新消费者第一道门槛。</strong>"1号和2号有什么区别""你家就这两个字号"——需要简明的链接选择指南。</div>
+  <div class="insight"><span class="insight-num">7</span><strong>价格敏感度持续。</strong>"恢复原价了"配合捂脸表情，促销后恢复原价对消费者心理影响明显。</div>
+  <div class="insight"><span class="insight-num">8</span><strong>送礼场景需求明确。</strong>"哪款送礼比较合适"是首次出现的送礼场景需求，建议开发送礼推荐话术和礼盒方案。</div>
+  <div class="insight"><span class="insight-num">9</span><strong>平台信任仍需建设。</strong>"是抖音平台吗"反映部分消费者对渠道的疑虑，应在直播间明确平台保障和售后承诺。</div>
+  <div class="insight"><span class="insight-num">10</span><strong>正面反馈简洁有力。</strong>"好参""值了"——品质认可度高，但需要更多场景化好评来强化转化。</div>
+</div>
+
+</div>
+
+<div class="footer">
+  高丽参直播间评论分析报告 · 由 TRAE 自动生成（补发）· 2026-08-22<br>
+  数据来源：飞书多维表格「高丽参直播间评论语料」· 1批次 29条评论
+  <div class="note">注：原定2026-08-22 09:00由定时任务自动生成，因任务执行异常数据被标记但报告未产出，现手动补发</div>
+</div>
+
+</body>
+</html>
