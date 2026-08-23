@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高丽参直播间评论分析报告 — 2026-08-23（补发）</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 50%, #e53935 100%); color: #fff; padding: 40px 24px; text-align: center; }
+.header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.header .date { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+.header .stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.header .stat { text-align: center; }
+.header .stat .num { font-size: 32px; font-weight: 700; }
+.header .stat .label { font-size: 12px; opacity: 0.8; margin-top: 2px; }
+.header .alert { margin-top: 16px; background: rgba(255,255,255,0.15); border-radius: 8px; padding: 8px 16px; font-size: 13px; display: inline-block; }
+.container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+.section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.section h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e53935; color: #b71c1c; }
+.topic { border-left: 3px solid #e53935; padding: 12px 16px; margin-bottom: 12px; background: #fafafa; border-radius: 0 8px 8px 0; transition: all 0.2s; }
+.topic:hover { background: #fff0f0; transform: translateX(4px); }
+.topic .topic-name { font-size: 15px; font-weight: 600; color: #b71c1c; margin-bottom: 4px; }
+.topic .topic-freq { display: inline-block; font-size: 11px; background: #e53935; color: #fff; padding: 1px 8px; border-radius: 10px; margin-left: 8px; vertical-align: middle; }
+.topic .topic-desc { font-size: 13px; color: #666; margin-bottom: 8px; }
+.topic .quote { font-size: 13px; color: #888; border-left: 2px solid #ddd; padding-left: 10px; margin: 4px 0; }
+.topic .quote .user { font-weight: 600; color: #555; }
+.faq { list-style: none; counter-reset: faq; }
+.faq li { counter-increment: faq; padding: 10px 0 10px 36px; position: relative; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+.faq li::before { content: counter(faq); position: absolute; left: 0; top: 10px; width: 24px; height: 24px; background: #e53935; color: #fff; border-radius: 50%; text-align: center; line-height: 24px; font-size: 12px; font-weight: 700; }
+.script-topic { background: linear-gradient(135deg, #fff8f8, #fff); border: 1px solid #ffcdd2; border-radius: 8px; padding: 16px; margin-bottom: 12px; transition: all 0.2s; }
+.script-topic:hover { box-shadow: 0 2px 8px rgba(229,57,53,0.15); }
+.script-topic .st-title { font-size: 15px; font-weight: 700; color: #b71c1c; margin-bottom: 6px; }
+.script-topic .st-angle { font-size: 13px; color: #666; }
+.script-topic .st-angle::before { content: "核心角度："; font-weight: 600; color: #888; }
+.insight { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; line-height: 1.7; }
+.insight:last-child { border-bottom: none; }
+.insight .insight-num { display: inline-block; width: 22px; height: 22px; background: #b71c1c; color: #fff; border-radius: 50%; text-align: center; line-height: 22px; font-size: 11px; font-weight: 700; margin-right: 8px; vertical-align: text-top; }
+.gpt-section { background: #1a1a2e; color: #e0e0e0; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+.gpt-section h2 { color: #e53935; border-bottom-color: #e53935; }
+.gpt-section .insight { border-bottom-color: #333; color: #ccc; }
+.gpt-section .insight .insight-num { background: #e53935; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+.footer .note { color: #e53935; margin-top: 4px; }
+@media (max-width: 600px) { .header h1 { font-size: 20px; } .header .stats { gap: 16px; } .header .stat .num { font-size: 24px; } .section { padding: 16px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>高丽参直播间评论分析报告</h1>
+  <div class="date">数据周期：8月22日（补发） | 来源：抖音直播间 | 报告日期：2026-08-23</div>
+  <div class="stats">
+    <div class="stat"><div class="num">1</div><div class="label">直播场次</div></div>
+    <div class="stat"><div class="num">20</div><div class="label">评论条数</div></div>
+    <div class="stat"><div class="num">8</div><div class="label">参与消费者</div></div>
+    <div class="stat"><div class="num">7</div><div class="label">需求主题</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">脚本选题</div></div>
+  </div>
+  <div class="alert">原定8/23 09:00自动生成，因定时任务执行异常数据被标记但报告未产出，现手动补发</div>
+</div>
+
+<div class="container">
+
+<div class="section">
+  <h2>当日评论概览</h2>
+  <div style="font-size:14px;color:#555;line-height:1.8;">
+    本期覆盖8月22日单场直播评论语料。消费者提问集中在<strong style="color:#b71c1c">试吃需求</strong>（连续四期出现，已成为最持久的高频需求）、<strong style="color:#b71c1c">食用方法与功效认知</strong>（持续高发）、<strong style="color:#b71c1c">切片保存与产品认知</strong>（新消费者尤其困惑）。核心新发现：出现香港/广东地区消费者主动分享日常泡参习惯，是地域市场扩展的信号；消费者开始关注参的表皮状态（黄皮vs淳化）和透光性，品质鉴别意识在升级。
+  </div>
+</div>
+
+<div class="section">
+  <h2>消费者需求主题分组</h2>
+
+  <div class="topic">
+    <div class="topic-name">主题1：试吃需求<span class="topic-freq">连续四期</span></div>
+    <div class="topic-desc">试吃需求从8/18持续至8/22，已连续四期出现，是消费者最持久的未满足需求。</div>
+    <div class="quote"><span class="user">达不刘：</span>有试吃吗</div>
+    <div class="quote"><span class="user">´UN李勇_´UN.union创始人：</span>有切片的吗？</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题2：食用方法与功效认知<span class="topic-freq">持续高频</span></div>
+    <div class="topic-desc">"怎么吃""吃了干嘛的"仍是新消费者进门第一问。</div>
+    <div class="quote"><span class="user">冷の 寂乄：</span>这个怎么吃呢</div>
+    <div class="quote"><span class="user">明哥哥：</span>吃了干嘛的</div>
+    <div class="quote"><span class="user">汕头伟哥：</span>韩叔，参腿泡水，一次大概多少克？</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题3：切片保存方法<span class="topic-freq">新增关注</span></div>
+    <div class="topic-desc">切片后的保存方法是新需求，消费者开始关心切片后的保鲜。</div>
+    <div class="quote"><span class="user">用户2948115245407：</span>切片了之后要怎么保存呢？</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题4：链接对比困惑<span class="topic-freq">新增</span></div>
+    <div class="topic-desc">消费者直接说二号链接和一号链接"一样"，链接区分话术不够清晰。</div>
+    <div class="quote"><span class="user">用户2948115245407：</span>二号链接跟一号链接一样</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题5：产品认知与品质鉴别<span class="topic-freq">认知升级</span></div>
+    <div class="topic-desc">消费者开始关注参的表皮状态和透光性，品质鉴别意识从"是不是假货"升级到"怎么判断品质等级"。</div>
+    <div class="quote"><span class="user">一叶轻舟：</span>有的参带黄皮，有的已经全部淳化，打灯透光，是怎么回事</div>
+    <div class="quote"><span class="user">一叶轻舟：</span>T15的看看 / 哪年产的呢</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题6：日常消费习惯分享<span class="topic-freq">地域市场信号</span></div>
+    <div class="topic-desc">香港/广东地区消费者主动分享日常泡参习惯，是高丽参从滋补品向日常饮品定位拓展的信号。</div>
+    <div class="quote"><span class="user">▷ ︎ı||ııı||ı| 7"err•：</span>我夏天也是泡高麗參</div>
+    <div class="quote"><span class="user">▷ ︎ı||ııı||ı| 7"err•：</span>幾本天天喝，比茶葉好，提神補氣</div>
+    <div class="quote"><span class="user">▷ ︎ı||ııı||ı| 7"err•：</span>這兩年我都開咗16間店 / 看你直播送飯</div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-name">主题7：社交互动与情感连接<span class="topic-freq">情感粘性</span></div>
+    <div class="topic-desc">消费者把直播间当作陪伴场景，"看你直播送饭"说明直播间有情感粘性。</div>
+    <div class="quote"><span class="user">▷ ︎ı||ııı||ı| 7"err•：</span>老韓 / 我來跟你聊聊</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>高频问题清单</h2>
+  <ol class="faq">
+    <li>有试吃吗？有切片的吗？（连续四期高频）</li>
+    <li>这个怎么吃？吃了干嘛的？（功效认知空白）</li>
+    <li>参腿泡水一次多少克？（具体用量追问）</li>
+    <li>切片了之后要怎么保存？（切片保鲜新需求）</li>
+    <li>二号链接跟一号链接有什么区别？（链接对比困惑）</li>
+    <li>T15是什么？哪年生产的？（产品编号认知）</li>
+    <li>黄皮和淳化有什么区别？打灯透光怎么看？（品质鉴别升级）</li>
+    <li>哪款送礼比较合适？（延续上期送礼需求）</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2>脚本选题建议</h2>
+  <div class="script-topic"><div class="st-title">选题1：试吃装终于来了！四期呼声终落地</div><div class="st-angle">试吃装发布 + 品质验证流程 + 先尝后买话术</div></div>
+  <div class="script-topic"><div class="st-title">选题2：切片保存全攻略——切片后怎么保鲜？</div><div class="st-angle">切片保存实操 + 保鲜工具推荐 + 保存期限对比</div></div>
+  <div class="script-topic"><div class="st-title">选题3：一号vs二号链接到底有什么区别？</div><div class="st-angle">实物对比 + 等级差异讲解 + 选择推荐</div></div>
+  <div class="script-topic"><div class="st-title">选题4：黄皮、淳化、透光——高丽参品质鉴别进阶课</div><div class="st-angle">表皮状态对比 + 透光鉴别实操 + 品质等级对应</div></div>
+  <div class="script-topic"><div class="st-title">选题5：香港人的高丽参日常——从滋补品到日常饮品</div><div class="st-angle">日常饮用场景 + 粤式泡参方法 + 比茶叶好的定位转换</div></div>
+  <div class="script-topic"><div class="st-title">选题6：参腿泡水实用指南——用量、方法、搭配</div><div class="st-angle">参腿用量标准 + 泡水方法 + 搭配方案</div></div>
+</div>
+
+<div class="gpt-section">
+  <h2>累计洞察（结合四期语料）</h2>
+  <div class="insight"><span class="insight-num">1</span><strong>试吃需求已连续四期出现，是最高优先级未满足需求。</strong>建议立即推出试吃装。</div>
+  <div class="insight"><span class="insight-num">2</span><strong>食用方法是永恒的知识空白。</strong>每期都有新消费者问怎么吃，建议固化3分钟新手食用指南环节。</div>
+  <div class="insight"><span class="insight-num">3</span><strong>切片需求在深化。</strong>从有没有切片到切片怎么保存，消费者进入使用阶段，需配套保存指南。</div>
+  <div class="insight"><span class="insight-num">4</span><strong>品质鉴别意识在升级。</strong>从是不是假货到黄皮vs淳化打灯透光，需更专业品质鉴别内容。</div>
+  <div class="insight"><span class="insight-num">5</span><strong>链接对比是持续痛点。</strong>从1号和2号有什么区别到二号跟一号一样，需固定链接说明板。</div>
+  <div class="insight"><span class="insight-num">6</span><strong>地域市场信号出现。</strong>香港消费者主动分享日常泡参习惯，粤语市场有日常消费基础。</div>
+  <div class="insight"><span class="insight-num">7</span><strong>直播间情感粘性强。</strong>看你直播送饭——直播间是陪伴场景，情感内容可加强粉丝粘性。</div>
+  <div class="insight"><span class="insight-num">8</span><strong>参腿利用是增量价值点。</strong>消费者主动问参腿泡水用量，赠参腿策略有效，配套指南提升价值感。</div>
+  <div class="insight"><span class="insight-num">9</span><strong>T15等产品编号认知缺失。</strong>需简明产品目录。</div>
+  <div class="insight"><span class="insight-num">10</span><strong>年份/生产日期关注持续。</strong>哪年产的连续出现，包装上应清晰标注。</div>
+</div>
+
+</div>
+
+<div class="footer">
+  高丽参直播间评论分析报告 · 由 TRAE 自动生成（补发）· 2026-08-23<br>
+  数据来源：飞书多维表格「高丽参直播间评论语料」· 1批次 20条评论
+  <div class="note">注：原定2026-08-23 09:00由定时任务自动生成，因任务执行异常数据被标记但报告未产出，现手动补发</div>
+</div>
+
+</body>
+</html>
