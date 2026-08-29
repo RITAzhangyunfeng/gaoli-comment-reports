@@ -1,0 +1,136 @@
+{
+  "report_date": "2026-08-26",
+  "data_date": "2026-08-26",
+  "source": "抖音直播间",
+  "total_comments": 24,
+  "unique_consumers": 7,
+  "topics_count": 7,
+  "faq_count": 8,
+  "topics": [
+    {
+      "id": "T1",
+      "name": "切片品质与包装",
+      "priority": "high",
+      "description": "消费者对切片后的包装和品质一致性提出新问题",
+      "quote_count": 3,
+      "key_quotes": [
+        "宇宇：切片用什么装？",
+        "宇宇：保证切片品质和原根一样吗 / 克重足吗"
+      ]
+    },
+    {
+      "id": "T2",
+      "name": "1号vs2号链接选择",
+      "priority": "high",
+      "description": "链接对比仍是新消费者的第一道门槛",
+      "quote_count": 2,
+      "key_quotes": [
+        "爱露营的泽哥：1号2号什么区别",
+        "宇宇：主推一号？（已购）"
+      ]
+    },
+    {
+      "id": "T3",
+      "name": "红参与高丽参品类混淆",
+      "priority": "high",
+      "description": "消费者对红参、高丽参、西洋参三者功效差异的集中困惑",
+      "quote_count": 2,
+      "key_quotes": [
+        "✨春色撩人✨：高丽参跟红参有什么区别",
+        "✨春色撩人✨：我喝西洋参上火高丽参会不会"
+      ]
+    },
+    {
+      "id": "T4",
+      "name": "超高龄适用性",
+      "priority": "high",
+      "description": "从70岁升级到90多岁，老年消费者群体的年龄上限在刷新",
+      "quote_count": 1,
+      "key_quotes": [
+        "✨春色撩人✨：90多岁的老人可以吃吗"
+      ]
+    },
+    {
+      "id": "T5",
+      "name": "试吃与试用",
+      "priority": "high",
+      "description": "试吃需求连续七期持续，本期扩展到家庭分享场景",
+      "quote_count": 3,
+      "key_quotes": [
+        "宇宇：试一下，第一次买 / 可以试吃送两份吗，老人家那边也给他们试试[色]"
+      ]
+    },
+    {
+      "id": "T6",
+      "name": "优惠与促销敏感",
+      "priority": "medium",
+      "description": "优惠力度预期在上升，参脚单卖需求首次出现",
+      "quote_count": 2,
+      "key_quotes": [
+        "用户大地苍狼，家泰正道堂：7号连接才优惠50[爱心]力度不够呢",
+        "用户大地苍狼，家泰正道堂：有没有参脚单卖的[爱心]"
+      ]
+    },
+    {
+      "id": "T7",
+      "name": "订单与售后",
+      "priority": "medium",
+      "description": "运费险和克重疑问",
+      "quote_count": 2,
+      "key_quotes": [
+        "开心每一天：有没有运费险（已购）",
+        "优质用户宇宇：不是三十克，是十克的"
+      ]
+    }
+  ],
+  "faq_list": [
+    { "rank": 1, "question": "切片用什么装？保证切片品质和原根一样吗？克重足吗？", "category": "切片品质与包装", "frequency": "high" },
+    { "rank": 2, "question": "1号2号什么区别？主推一号？", "category": "链接选择困惑", "frequency": "high" },
+    { "rank": 3, "question": "高丽参跟红参有什么区别？", "category": "品类认知空白", "frequency": "high" },
+    { "rank": 4, "question": "我喝西洋参上火，高丽参会不会？", "category": "上火对比决策", "frequency": "high" },
+    { "rank": 5, "question": "90多岁的老人可以吃吗？", "category": "超高龄适用性", "frequency": "high" },
+    { "rank": 6, "question": "可以试吃送两份吗？试一下第一次买", "category": "试吃需求", "frequency": "high" },
+    { "rank": 7, "question": "7号连接才优惠50，力度不够", "category": "价格敏感", "frequency": "medium" },
+    { "rank": 8, "question": "有没有运费险？", "category": "售后保障", "frequency": "medium" }
+  ],
+  "script_topics": [
+    {
+      "id": "S1",
+      "title": "切片后用什么装？——切片包装与保存全攻略",
+      "angle": "切片包装展示 + 保存容器推荐 + 品质一致性承诺",
+      "target_audience": "已购买切片产品的消费者",
+      "priority": "high"
+    },
+    {
+      "id": "S2",
+      "title": "红参vs高丽参vs西洋参——上火体质怎么选？",
+      "angle": "三参功效对比 + 上火体质适配 + 选择决策树",
+      "target_audience": "在人参品类间犹豫的消费者",
+      "priority": "high"
+    },
+    {
+      "id": "S3",
+      "title": "90岁老人能吃高丽参吗？——超高龄食用指南",
+      "angle": "超高龄适用性 + 用量调整 + 食用方式推荐 + 禁忌说明",
+      "target_audience": "为高龄长辈购买的人群",
+      "priority": "high"
+    },
+    {
+      "id": "S4",
+      "title": "试吃送长辈——一份试吃装，全家都放心",
+      "angle": "家庭试吃场景 + 长辈送礼话术 + 决策门槛降低",
+      "target_audience": "想为家人购买的消费者",
+      "priority": "medium"
+    }
+  ],
+  "cumulative_insights": [
+    "切片关注链持续升级：有没有→纯不纯→用什么装。消费者对切片的关注从存在性到品质再到包装容器，说明切片产品已进入使用阶段。",
+    "红参vs高丽参vs西洋参的三参混淆在加剧。从'红参和高丽参区别'到'我喝西洋参上火，高丽参会不会'，消费者在三参之间做选择时缺乏清晰的决策依据。",
+    "超高龄适用性从70岁推到90+岁。'90多岁老人可以吃吗'将目标人群的年龄上限大幅扩展。",
+    "试吃需求连续七期，场景在扩展。从个人试吃到'送两份给老人家'，试吃需求从个人决策扩展到家庭分享场景。",
+    "上火成为跨品类决策关键词。'我喝西洋参上火，高丽参会不会'说明'上火'是消费者在人参品类间切换的核心顾虑。",
+    "优惠力度预期在上升。'7号连接才优惠50，力度不够'反映消费者对优惠幅度的期望在提高。",
+    "参脚单卖需求首次出现。'有没有参脚单卖的'是新的产品形态需求。",
+    "运费险成为基础信任要求。'有没有运费险'说明售后保障已成为消费者下单前的标准检查项。"
+  ]
+}
